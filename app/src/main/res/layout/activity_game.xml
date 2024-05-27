@@ -5,42 +5,59 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".GameActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3"
-        android:padding="5dp"
-        >
+        android:padding="5dp">
 
         <SurfaceView
+            android:id="@+id/surfaceView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/surfaceView"/>
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_arrow_forward_ios_24" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+        android:layout_weight="1"
         android:background="@android:color/black"
-        >
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:tag="top"
+            android:layout_marginLeft="80"
+            android:background="@android:color/white"
+            android:contentDescription="TODO"
             android:onClick="changeSnakeDirection"
             android:src="@drawable/baseline_arrow_drop_up_24"
+            android:tag="top" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="80"
             android:background="@android:color/white"
-            />
+            android:contentDescription="TODO"
+            android:onClick="changeSnakeDirection"
+            android:src="@drawable/baseline_arrow_drop_up_24"
+            android:tag="top" />
+
 
     </LinearLayout>
 
